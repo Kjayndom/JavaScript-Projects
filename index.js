@@ -1,107 +1,12 @@
-// // ********JAVASCRIPT ALGORITHMS PROJECTS ***********
 
-// // ****PALINDROME CHECKER****
-
-// // function palindrome(str) {
-// //   let regex = /[^a-z0-9]/ig
-// // 	str = str.toLowerCase().replace(regex, "")
-// // 	let reverseStr = "";
-// // 	for (let i = str.length - 1; i >= 0; i--){
-// // 		reverseStr += str[i]
-// // 	}
-// // 	return str === reverseStr	
-// // }
-
-// // console.log(palindrome("The quick"));
-
-
-// ****CAESARS CIPHER****
-
-// function rot13(str) {
-// 	const letters = 
-// 	["A", "B", "C", "D", "E", "F", "G", "H","I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
-// 	"A", "B", "C", "D", "E", "F", "G", "H","I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-	
-// 	let cipherText = "";
-
-// 	for (let i=0; i < str.length; i++){
-// 		if (letters.includes(str[i])){
-// 			let shift = letters.indexOf(str[i]) + 13
-// 			cipherText += letters[shift]
-// 		}else {cipherText += str[i]}
-// 	}
-//  	return cipherText;
-// }
-
-// console.log(rot13("SERR PBQR PNZC"));
-
-// *****TELEPHONE NUMBER VALIDATOR*****
-
-// function telephoneCheck(str) {
-// 	let validUSNum = /^1((\s\(\d{3}\)|\s\d{3}|\(\d{3}\))(\d{3}|\s\d{3}|[-]\d{3})(\s\d{4}|[-]\d{4}))$|(^(\d{3}|\(\d{3}\))(\d{3}|\s\d{3}|[-]\d{3})(\d{4}|\s\d{4}|[-]\d{4}))$/
-// 	let result = validUSNum.test(str)
-// 	return result;
-// }
-
-// console.log(telephoneCheck("1 (555)555-5555"));
-
-
-// // ***ROMAN NUMERAL CONVERTER I***
-
-// function convertToRoman(num) {
-// 	const numerals = {1: "I", 4: "IV", 5: "V", 9: "IX", 10: "X", 40: "XL", 50: "L", 90: "XC", 100: "C", 400: "CD", 500: "D", 900: "CM", 1000: "M"};
-// 	const numeralKeys = Object.keys(numerals)
-// 	let numAggregate = 0;
-// 	let romanNumeral = ""
-// 	let lastKeyIndex = numeralKeys.length - 1;
-
-// 	for (let i = 0; i < numeralKeys.length; i++){
-// 		if (num < numeralKeys[i]){
-// 			numAggregate += numeralKeys[i-1]
-// 			romanNumeral+= numerals[numeralKeys[i-1]]
-// 			return romanNumeral + convertToRoman(num-numAggregate)
-// 		} else if (num > numeralKeys[lastKeyIndex]){
-// 			numAggregate+= numeralKeys[lastKeyIndex]
-// 			romanNumeral += numerals[numeralKeys[lastKeyIndex]]
-// 			return romanNumeral + convertToRoman(num-numAggregate)
-
-// 		} else if (num== numeralKeys[i]) {
-// 			return romanNumeral+= numerals[num]
-// 		}
-// 	}
-// } 
-//  console.log(convertToRoman(2200));
-
-
-// // ***ROMAN NUMERAL CONVERTER II ****
-// //  function convertToRoman(num) {
-// // 	const numerals = [[1,"I"], [4, "IV"], [5, "V"], [9, "IX"], [10, "X"], [40, "XL"], [50, "L"], [90, "XC"], [100, "C"], [400, "CD"], [500, "D"], [900, "CM"], [1000, "M"]];
-// // 	let numAggregate = 0;
-// // 	let romanNumeral = ""
-// // 	let highestNumIndex = numerals.length - 1;
-
-// // 	for (let i = 0; i < numerals.length; i++){
-// // 		if (num < numerals[i][0]){
-// // 			numAggregate += numerals[i-1][0]
-// // 			romanNumeral += numerals[i-1][1]
-// // 			return romanNumeral + convertToRoman(num-numAggregate)
-
-// // 		} else if (num > numerals[highestNumIndex][0]){
-// // 			numAggregate += numerals[highestNumIndex][0]
-// // 			romanNumeral += numerals[highestNumIndex][1]
-// // 			return romanNumeral + convertToRoman(num-numAggregate)
-
-// // 		} else if (num == numerals[i][0]) {
-// // 			return romanNumeral += numerals[i][1]
-// // 		}
-// // 	}
-// // } 
-// //  console.log(convertToRoman(7));
 
 
 // ***CASH REGISTER***
+// This is a virtual cash register that compares the change to be received with the amount available in the cash drawer and returns change if any in an orderly fashion
+// And displays the amount left in the register according to currency denomination.
 
 function checkCashRegister(price, cash, cid) {
+	 // cid stands for available cash in drawer
 	let change = cash - price;
 	const currencyDenomination = {"PENNY": 0.01, "NICKEL": 0.05, "DIME": 0.1, "QUARTER": 0.25, "ONE": 1, "FIVE": 5, "TEN": 10, "TWENTY": 20, "ONE HUNDRED": 100};
 	let cidTotalSorted = 0
