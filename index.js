@@ -1,6 +1,3 @@
-
-
-
 // ***CASH REGISTER***
 // This is a virtual cash register that compares the change to be received with the amount available in the cash drawer and returns change if any in an orderly fashion
 // And displays the amount left in the register according to currency denomination.
