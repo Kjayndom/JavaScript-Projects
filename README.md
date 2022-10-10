@@ -1,4 +1,1 @@
-# JavaScript-Projects
-This simple program takes in an arabic numeral and converts it to roman figures.
-I created a second version just for fun. 
-Please feel free to comment on my work. Thank you.
+These are a collection of some of the projects that I've done so far from the very simple to a little complex.
