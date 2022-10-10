@@ -1,6 +1,6 @@
 ****CAESARS CIPHER****
 
-function CIPHER(str) {
+function CIPHER_UNLOCKER(str) {
 	const letters = 
 	["A", "B", "C", "D", "E", "F", "G", "H","I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
 	"A", "B", "C", "D", "E", "F", "G", "H","I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
@@ -16,5 +16,5 @@ function CIPHER(str) {
  	return cipherText;
 }
 
-console.log(CIPHER("SERR PBQR PNZC"));
+console.log(CIPHER_UNLOCKER("SERR PBQR PNZC"));
 
